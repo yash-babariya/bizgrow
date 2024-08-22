@@ -1,13 +1,12 @@
 import React from 'react';
 import './styles/index.scss';
-import Signup from './componets/form/signup';
-import Login from './componets/form/login';
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
 
 function App() {
   return (
     <div>
-      <Signup />
-      <Login />
+      <RouterProvider router={router} />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { TbPasswordUser } from "react-icons/tb";
 import trustedCompanies from '../../../assets/images/trustedCompanies.webp';
 import yash from '../../../assets/images/yash-director.jpg';
 import logo from '../../../assets/logo/logo.webp';
+import { NavLink } from 'react-router-dom';
 
 export default function Login() {
     return (
@@ -67,7 +68,7 @@ export default function Login() {
                             <a href="https://x.com" target="_blank" className="social-icons-list-item d-flex"><span alt="X" title="X" className="social-icon x"></span></a>
                         </div>
                     </div>
-                    <p>Don't have an account? <a href="#">Sign up</a></p>
+                    <p>Don't have an account? <NavLink to="/signup">Sign up</NavLink></p>
                 </div>
             </div>
         </div>

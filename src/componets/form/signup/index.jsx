@@ -8,6 +8,7 @@ import { FiMapPin } from "react-icons/fi";
 import trustedCompanies from '../../../assets/images/trustedCompanies.webp';
 import yash from '../../../assets/images/yash-director.jpg';
 import logo from '../../../assets/logo/logo.webp';
+import { NavLink } from 'react-router-dom';
 
 const IND_States = [
     'Andhra Pradesh',
@@ -116,7 +117,7 @@ export default function Signup() {
                         <button type="submit">Create your account</button>
                     </form>
                     <div className="social-signin">
-                        <p>or sign in using</p>
+                        <p>or login using</p>
                         <div className="social-icons-list d-flex gap-10">
                             <a href="https://google.com" target="_blank" className="social-icons-list-item d-flex"><span alt="Google" title="Google" className="social-icon google"></span></a>
                             <a href="https://microsoft.com" target="_blank" className="social-icons-list-item d-flex"><span alt="Office365" title="Office365" className="social-icon office365"></span></a>
@@ -125,7 +126,7 @@ export default function Signup() {
                             <a href="https://x.com" target="_blank" className="social-icons-list-item d-flex"><span alt="X" title="X" className="social-icon x"></span></a>
                         </div>
                     </div>
-                    <p>Already have an account? <a href="#">Sign in</a></p>
+                    <p>Already have an account? <NavLink to="/login">login</NavLink></p>
                 </div>
             </div>
         </div>
