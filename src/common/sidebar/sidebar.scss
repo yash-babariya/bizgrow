@@ -1,0 +1,87 @@
+.sidebar {
+    width: 250px;
+    background-color: var(--theme-black-background);
+    color: var(--theme-white-text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    box-shadow: -3px 0 5px 0 #000000;
+    transition: width 0.6s ease;
+
+    &.collapsed {
+        width: 80px;
+
+        .sidebar__logo {
+            img {
+                width: 50px;
+                transition: width 0.6s ease;
+            }
+        }
+
+        &__item {
+            justify-content: center;
+
+            span {
+                display: none;
+                transition: display 0.6s ease;
+                /* Hide text in collapsed view */
+            }
+        }
+    }
+
+    &__toggle {
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+        color: var(--theme-company-background);
+        transition: transform 0.3s ease;
+
+        .rotated {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__logo {
+        padding: 20px;
+        background-color: var(--theme-black-background);
+
+        img {
+            display: block;
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            transition: width 0.6s ease;
+        }
+    }
+
+    &__menu {
+        flex: 1;
+        padding-top: 20px;
+    }
+
+    &__item {
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+        transition: padding 0.3s ease;
+
+        &:hover {
+            background-color: #0097b28c;
+            color: var(--theme-white-text);
+        }
+
+        span {
+            margin-left: 10px;
+            transition: display 0.3s ease;
+        }
+    }
+
+    .active {
+        background-color: var(--theme-company-background);
+    }
+}
